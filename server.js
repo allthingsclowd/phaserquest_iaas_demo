@@ -43,7 +43,7 @@ app.get('/',function(req,res){
 var myArgs = require('optimist').argv;
 var mongoHost, mongoDBName;
 
-console.log('myargs 1st --- ' + myArgs.mongoServer);
+console.log('myargs 1st --- ' + myArgs.mongodbServer);
 
 function sleep(milliseconds) {
     console.log('Waiting for database - start: ' + new Date().getTime());
@@ -87,12 +87,12 @@ server.listen(myArgs.p || process.env.PORT || 8081,function(){ // -p flag to spe
        // var mongoPort = (myArgs.mongoPort || 27017);
        // var mongoServer = (myArgs.mongoServer || 'localhost');
        console.log('myargs --- ' + myArgs.mongodbServer);
-       var mongobdPort = (myArgs.mongodbPort || 27017);
+       var mongodbPort = (myArgs.mongodbPort || 27017);
        var mongodbServer = (myArgs.mongodbServer || 'localhost');
        var mongodbName = (myArgs.mongodbName || 'phaserQuest');
        var mongodbUser = (myArgs.mongodbUser || 'phaser');
        var mongodbPassword = (myArgs.mongodbPassword || 'phas3r');
-       mongodbHost = mongodbServer+':'+mongodbPort;
+       var mongodbHost = mongodbServer+':'+mongodbPort;
 
        if ((mongodbUser == '') || (mongodbPassword == '')){
            mongoURL = 'mongodb://'+mongodbHost+'/'+mongodbName;
