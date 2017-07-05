@@ -1,0 +1,13 @@
+---
+applications:
+- name: phaserquest
+  host: phaser
+  memory: 256M
+  services:
+  - k5-iaas-mongo-db
+  # env:
+  #   NODE_ENV: production
+# declared-services:
+#   k5-iaas-mongo-db:
+#     label: k5-iaas-mongo-db
+#     plan: 100
