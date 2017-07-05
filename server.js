@@ -92,12 +92,12 @@ server.listen(myArgs.p || process.env.PORT || 8081,function(){ // -p flag to spe
        var mongodbName = (myArgs.mongodbName || 'phaserQuest');
        var mongodbUser = (myArgs.mongodbUser || 'phaser');
        var mongodbPassword = (myArgs.mongodbPassword || 'phas3r');
-       mongodbHost = mongodbServer+':'+mongoPort;
+       mongodbHost = mongodbServer+':'+mongodbPort;
 
        if ((mongodbUser == '') || (mongodbPassword == '')){
-           mongoURL = 'mongodb://'+mongoHost+'/'+mongodbName;
+           mongoURL = 'mongodb://'+mongodbHost+'/'+mongodbName;
        } else {
-           mongoURL = 'mongodb://'+mongodbUser+':'+mongodbPassword+'@'+mongoHost+'/'+mongodbName;       
+           mongoURL = 'mongodb://'+mongodbUser+':'+mongodbPassword+'@'+mongodbHost+'/'+mongodbName;       
 
        }
        mongo.connect(mongoURL,function(err,db){
