@@ -95,9 +95,9 @@ server.listen(myArgs.p || process.env.PORT || 8081,function(){ // -p flag to spe
        mongodbHost = mongodbServer+':'+mongoPort;
 
        if ((mongodbUser == '') || (mongodbPassword == '')){
-           mongoURL = 'mongodb://'+mongoHost+'/'+mongoDBName;
+           mongoURL = 'mongodb://'+mongoHost+'/'+mongodbName;
        } else {
-           mongoURL = 'mongodb://'+mongodbUser+':'+mongodbPassword+'@'+mongoHost+'/'+mongoDBName;       
+           mongoURL = 'mongodb://'+mongodbUser+':'+mongodbPassword+'@'+mongoHost+'/'+mongodbName;       
 
        }
        mongo.connect(mongoURL,function(err,db){
